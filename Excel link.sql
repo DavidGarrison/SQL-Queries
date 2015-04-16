@@ -1,0 +1,1 @@
+UserID = '=HYPERLINK("http://url?UserID=' + CAST(UserID as varchar) + '", "' + CAST(UserID as varchar) + '")'

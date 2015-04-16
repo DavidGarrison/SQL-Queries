@@ -1,0 +1,1 @@
+Rank = ROW_NUMBER() OVER(PARTITION BY 1 order by sum(ol.ExtendedPrice) desc)
