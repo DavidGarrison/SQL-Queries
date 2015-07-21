@@ -1,0 +1,6 @@
+SELECT
+a.last_execution_time AS ExectuionTime,
+b.text AS Query
+FROM sys.dm_exec_query_stats a
+CROSS APPLY sys.dm_exec_sql_text(a.sql_handle) b
+ORDER BY a.last_execution_time DESC
