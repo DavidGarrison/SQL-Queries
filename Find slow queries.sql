@@ -3,10 +3,10 @@ SELECT  creation_time
         ,total_physical_reads
         ,total_logical_reads 
         ,total_logical_writes
-        , execution_count
-        , total_worker_time
-        , total_elapsed_time
-        , total_elapsed_time / execution_count avg_elapsed_time
+        ,execution_count
+        ,total_worker_time
+        ,total_elapsed_time
+        ,total_elapsed_time / execution_count avg_elapsed_time
         ,SUBSTRING(st.text, (qs.statement_start_offset/2) + 1,
          ((CASE statement_end_offset
           WHEN -1 THEN DATALENGTH(st.text)
